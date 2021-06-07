@@ -6,26 +6,24 @@ body {
   margin: 0;
 }
 
-div {
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-}
-
 ul {
   list-style-type: none;
+  display: table-row;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #1d1c1c;
   width: 100%;
-  display: inline-block;
+}
+
+ul li {
+  display: table-cell;
+  height: 100px;
+  list-style-type: none;
+  margin: 20px;
   vertical-align: middle;
-  line-height: normal;
 }
 
 img {
-  display: inline-block;
   width: 75px;
 }
 
@@ -33,19 +31,21 @@ img {
   float: left;
 }
 
-.rightSide{
+.rightSide {
   float: right;
 }
 
 .link {
-  display: block;
-  color: #CBB26A;
+  color: #cbb26a;
   text-align: center;
   padding: 18px 20px;
   text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
 }
 
 .link:hover:not(#logo) {
-  background-color: #CBB26A;
-  color:#1d1c1c;
+  background-color: #cbb26a;
+  color: #1d1c1c;
 }
