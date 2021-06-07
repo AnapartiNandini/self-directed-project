@@ -8,23 +8,24 @@ body {
 
 ul {
   list-style-type: none;
-  display: table-row;
   margin: 0;
   padding: 0;
+  overflow: auto;
   background-color: #1d1c1c;
   width: 100%;
 }
 
 ul li {
-  display: table-cell;
-  height: 100px;
   list-style-type: none;
   margin: 20px;
-  vertical-align: middle;
+  display: block;
+  height: 55px;
+  line-height: 55px;
 }
 
 img {
   width: 75px;
+  vertical-align: middle;
 }
 
 .leftSide {
@@ -40,9 +41,6 @@ img {
   text-align: center;
   padding: 18px 20px;
   text-decoration: none;
-  display: table-cell;
-  vertical-align: middle;
-  height: 100px;
 }
 
 .link:hover:not(#logo) {
