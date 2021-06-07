@@ -1,20 +1,21 @@
 import{Link} from "react-router-dom";
 import './App.css';
+import logo from  "./MITTPosts-Logo.PNG";
 
 function App() {
   return (
     <>
     <header>
-      <ul lassName="leftSide">
-        <li><Link className="link" to="/">Home</Link></li>
-        <li><Link className="link" to="/shopping">shopping</Link></li>
-        <li><Link className="link" to="/add-post">Post</Link></li>
+     <div>
+      <ul>
+        <li className="leftSide"><Link className="link" id="logo" to="/"><img src={logo} alt="MITTPosts logo"/></Link></li>
+        <li className="leftSide"><Link className="link" to="/shopping">Shopping</Link></li>
+        <li className="leftSide"><Link className="link" to="/add-post">Post</Link></li>
+        <li className="rightSide"><Link className="link" to="/profile">Profile</Link></li>
+        <li className="rightSide"><Link className="link" to="/notifications">Notifications</Link></li>
+        <li className="rightSide"><Link className="link" to="/search">Search</Link></li>
       </ul>
-      <ul lassName="rightSide">
-        <li><Link className="link" to="/search">search</Link></li>
-        <li><Link className="link" to="/notifications">notifications</Link></li>
-        <li><Link className="link" to="/profile">Profile</Link></li>
-      </ul>
+      </div>
     </header>
     </>
   );
