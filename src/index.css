@@ -19,7 +19,7 @@ body {
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
-  #cbb26a-space: nowrap;
+  white-space: nowrap;
   direction: ltr;
   margin-right: 3px;
   position: relative;
@@ -41,13 +41,13 @@ body {
 .link {
   text-decoration: none;
   color: #cbb26a;
-  padding: 2px;
+  padding: 5px;
   display: inline-block;
 }
 
 .link:hover:not(#logo, #search) {
-  background-color: #cbb26a;
-  color: #1d1c1c;
+  border-bottom: 2px solid #cbb26a;
+  color: #cbb26a;
 }
 
 .nav ul {
@@ -134,15 +134,14 @@ aside {
 }
 
 aside img {
-  width: 150px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 aside img,
 aside ul,
-aside a {
+aside .sidebar-link {
   display: block;
   color: #cbb26a;
   padding: 16px;
@@ -152,11 +151,11 @@ aside a {
 aside li {
   display: block;
   color: #cbb26a;
-  padding: 2px 16px 2px 16px;
+  padding: 0 16px;
   text-decoration: none;
 }
 
-aside a {
+aside .sidebar-link {
   padding-bottom: 20px;
   font-size: 18px;
 }
@@ -178,12 +177,12 @@ aside p {
   font-size: 10px;
 }
 
-aside a.active {
+aside .sidebar-link.active {
   background-color: #1d1c1c;
   color: #cbb26a;
 }
 
-aside a:hover:not(.active) {
+aside .sidebar-link:hover:not(.active) {
   background-color: #cbb26a;
   color: #1d1c1c;
   border-radius: 10px 10px 10px 10px;
