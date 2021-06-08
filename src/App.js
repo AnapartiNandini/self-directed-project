@@ -10,26 +10,17 @@ function App() {
           <div className="nav-wrapper">
             <div className="nav">
               <ul>
-                <li className="search">
-                  <i className="material-icons-outlined">search</i>
-                  <form>
-                    <input
-                      size="40"
-                      type="search"
-                      id="search-bar"
-                      placeholder="Search"
-                    />
-                  </form>
-                </li>
+                <div className="hamburger">
+                  <li>
+                    <Link to="">
+                      <span className="material-icons-outlined">menu</span>
+                    </Link>
+                  </li>
+                </div>
                 <div className="options">
                   <li>
                     <Link className="link" id="logo" to="/">
                       <img src={logo} alt="MITTPosts logo" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="link" to="/shopping">
-                      Shopping
                     </Link>
                   </li>
                   <li>
@@ -48,13 +39,17 @@ function App() {
                     </Link>
                   </li>
                 </div>
-                <div className="hamburger">
-                  <li>
-                    <a href="#">
-                      <span className="material-icons-outlined">menu</span>
-                    </a>
-                  </li>
-                </div>
+                <li className="search">
+                  <i className="material-icons-outlined">search</i>
+                  <form>
+                    <input
+                      size="40"
+                      type="search"
+                      id="search-bar"
+                      placeholder="Search"
+                    />
+                  </form>
+                </li>
               </ul>
             </div>
           </div>
@@ -71,41 +66,38 @@ function App() {
             <div className="sidebar-options">
               <ul>
                 <li>
-                  <a href="#">
-                    <span className="material-icons-outlined">radio</span>Radio
-                  </a>
+                  <Link to="">
+                    <span class="material-icons-outlined">groups</span>Followers
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <span className="material-icons-outlined">
-                      featured_play_list
-                    </span>
+                  <Link to="">
+                    <span class="material-icons-outlined">groups</span>Following
                     My Music
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <span className="material-icons-outlined">videocam</span>
-                    Video
-                  </a>
+                  <Link to="">
+                    <span class="material-icons-outlined">settings</span>Settings
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="">
                     <span className="material-icons-outlined">podcasts</span>
                     Podcast
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="">
                     <span className="material-icons-outlined">music_video</span>
                     Artists
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="">
                     <span className="material-icons-outlined">logout</span>
                     Logout
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
