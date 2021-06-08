@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  background-color: #1d1c1c;
 }
 
 body {
@@ -43,7 +44,27 @@ img {
   text-decoration: none;
 }
 
-.link:hover:not(#logo) {
+.link:hover:not(#logo, #search) {
   background-color: #cbb26a;
   color: #1d1c1c;
+}
+
+input[type=text] {
+  width: 160px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 18px 10px;
+  transition: width 0.4s ease-in-out;
+  color: #cbb26a;
+  /* float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 12px;
+   */
 }
