@@ -1,17 +1,12 @@
-import "./App.css";
-// import Header from "./Header";
-// import Profile from "./Profile";
 import { Link, Route, Switch } from "react-router-dom";
-// import Home from "./Home";
+import App from "./App";
 import Post from "./Post";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
 import logo from "./MITTPosts-Logo.PNG";
 
-
-function App() {
+function Header() {
   return (
-    <>
     <header>
       <div className="tracking-in-expand-fwd">
         <div className="nav-wrapper">
@@ -49,9 +44,9 @@ function App() {
               </div>
 
               <Switch>
-                {/* <Route exact path="/">
+                <Route exact path="/">
                   <App />
-                </Route> */}
+                </Route>
                 <Route exact path="/add-post">
                   <Post />
                 </Route>
@@ -80,10 +75,7 @@ function App() {
         </div>
       </div>
     </header>
-      {/* <Header />
-      <Profile /> */}
-    </>
   );
 }
 
-export default App;
+export default Header;
