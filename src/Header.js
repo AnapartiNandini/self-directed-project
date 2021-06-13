@@ -1,5 +1,4 @@
 import { Link, Route, Switch } from "react-router-dom";
-import App from "./App";
 import Post from "./Post";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
@@ -44,9 +43,7 @@ function Header() {
               </div>
 
               <Switch>
-                <Route exact path="/">
-                  <App />
-                </Route>
+                <Route exact path="/"></Route>
                 <Route exact path="/add-post">
                   <Post />
                 </Route>

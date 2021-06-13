@@ -142,9 +142,11 @@ aside {
   width: 300px;
   background-color: #2e2d2d;
   position: fixed;
-  height: 100%;
+  top: 100px;
+  height: 80%;
   color: #cbb26a;
   border-radius: 10px 10px 10px 10px;
+  text-align: center;
 }
 
 aside img {
@@ -194,6 +196,7 @@ aside p {
 aside .sidebar-link.active {
   background-color: #1d1c1c;
   color: #cbb26a;
+  width: 0 auto;
 }
 
 aside .sidebar-link:hover:not(.active) {
