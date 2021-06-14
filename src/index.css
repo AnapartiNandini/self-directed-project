@@ -137,13 +137,13 @@ aside {
   border-right: 1px solid #383737;
   overflow-y: hidden;
   display: block;
-  margin: 5px;
-  padding: 0;
-  width: 300px;
-  background-color: #2e2d2d;
+  padding: 20px 0 0 0;
+  width: 50%;
+  background-color: #383737;
   position: fixed;
-  top: 100px;
-  height: 80%;
+  top: 25%;
+  left: 25%;
+  height: 60%;
   color: #cbb26a;
   border-radius: 10px 10px 10px 10px;
   text-align: center;
@@ -153,6 +153,10 @@ aside img {
   width: 200px;
   margin: 0 auto;
   padding: 0;
+}
+
+.sidebar-options ul {
+  width: 100%;
 }
 
 aside img,
@@ -167,13 +171,18 @@ aside .sidebar-link {
 aside li {
   display: block;
   color: #cbb26a;
-  padding: 0 16px;
+  padding: 0 20px;
   text-decoration: none;
+  width: 50%;
+  text-align: left;
 }
 
 aside .sidebar-link {
+  display: block;
   padding-bottom: 20px;
-  font-size: 18px;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
 }
 
 aside h3,
@@ -189,14 +198,14 @@ aside h3 {
 }
 
 aside p {
-  color: grey;
+  color: #1d1c1c;
   font-size: 10px;
 }
 
 aside .sidebar-link.active {
   background-color: #1d1c1c;
   color: #cbb26a;
-  width: 0 auto;
+  width: 100%;
 }
 
 aside .sidebar-link:hover:not(.active) {
@@ -207,7 +216,8 @@ aside .sidebar-link:hover:not(.active) {
 
 @media only screen and (max-width: 1030px) {
   aside {
-    display: none;
+    left: 10%;
+    width: 80%;
   }
 
   .body-content {

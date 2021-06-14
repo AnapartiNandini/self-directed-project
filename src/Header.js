@@ -43,7 +43,9 @@ function Header() {
               </div>
 
               <Switch>
-                <Route exact path="/"></Route>
+                <Route exact path="/">
+                  
+                </Route>
                 <Route exact path="/add-post">
                   <Post />
                 </Route>
