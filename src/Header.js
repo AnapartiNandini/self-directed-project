@@ -1,7 +1,4 @@
-import { Link, Route, Switch } from "react-router-dom";
-import Post from "./Post";
-import Profile from "./Profile";
-import Notifications from "./Notifications";
+import { Link } from "react-router-dom";
 import logo from "./MITTPosts-Logo.PNG";
 
 function Header() {
@@ -42,20 +39,7 @@ function Header() {
                 </li>
               </div>
 
-              <Switch>
-                <Route exact path="/">
-                  
-                </Route>
-                <Route exact path="/add-post">
-                  <Post />
-                </Route>
-                <Route exact path="/profile">
-                  <Profile />
-                </Route>
-                <Route exact path="/notifications">
-                  <Notifications />
-                </Route>
-              </Switch>
+              
 
               <li className="search">
                 <i className="material-icons-outlined">search</i>
