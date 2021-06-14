@@ -259,6 +259,29 @@ select {
   left: 20%;
 }
 
+.post {
+  display: flex;
+  gap: 24px;
+  border-color: #eeeeef;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 24px;
+}
+
+.post img {
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.post-title {
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 1030px) {
   aside {
     left: 10%;
