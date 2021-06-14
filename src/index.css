@@ -214,6 +214,46 @@ aside .sidebar-link:hover:not(.active) {
   border-radius: 10px 10px 10px 10px;
 }
 
+.create-post-form input[type="text"],
+input[type="URL"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #1d1c1c;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.create-post-form input[type="submit"] {
+  width: 15%;
+  font-size: 20px;
+  text-align: center;
+  background-color: #383737;
+  color: #cbb26a;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-post-form input[type="submit"]:hover {
+  background-color: #cbb26a;
+  color: #1d1c1c;
+}
+
+.create-post-form {
+  border-radius: 20px;
+  background-color: #383737;
+  padding: 100px;
+  position: absolute;
+  top: 225%;
+  left: 20%;
+}
+
 @media only screen and (max-width: 1030px) {
   aside {
     left: 10%;
@@ -226,5 +266,13 @@ aside .sidebar-link:hover:not(.active) {
 
   .search {
     margin: 0 auto 0 63px;
+  }
+
+  .create-post-form {
+    left: 0%;
+  }
+
+  .create-post-form input[type="submit"] {
+    width: 17%;
   }
 }
