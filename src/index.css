@@ -308,6 +308,21 @@ select {
   margin-top: 10px;
 }
 
+.comment-btn {
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1d1c1c;
+  color: #cbb26a;
+  border: none;
+}
+
+.comment-btn:hover {
+  background-color: #cbb26a;
+  color: #1d1c1c;
+  cursor: pointer;
+}
+
 /*--------------------------------------------------*/
 
 
