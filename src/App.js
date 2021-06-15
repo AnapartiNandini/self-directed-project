@@ -6,9 +6,13 @@ import Posts from "./Posts";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
 import Post from "./Post";
+import Login from "./Login";
+import Signup from "./Signup";
+import EditProfile from "./EditProfile";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
+  const [user, setUser] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -31,6 +35,14 @@ const App = () => {
     const post = await response.json();
 
     setPosts((prevPosts) => [...prevPosts, post]);
+  };
+
+  const currentUser = (user) => {
+    setUser(user);
+  };
+
+  const logout = () => {
+    setUser();
   };
 
   return (
@@ -56,11 +68,21 @@ const App = () => {
             }}
           />
         </Route>
-        <Route exact path="/profile">
-          <Profile />
-        </Route>
         <Route exact path="/notifications">
           <Notifications />
+        </Route>
+        
+        <Route exact path="/profile">
+          <Profile logout={logout} currentUser={user} />
+        </Route>
+        <Route exact path="/login">
+          <Login currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/signup">
+          <Signup currentUser={currentUser}/>
+        </Route>
+        <Route exact path="/edit-profile">
+          <EditProfile user={user} email={user.email}/>
         </Route>
       </Switch>
     </>

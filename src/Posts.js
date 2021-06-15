@@ -23,20 +23,22 @@ const CreatePost = (props) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     props.onCreatePost(input);
-    setInput(inputs);
-    history.push("/");
+      setInput(inputs);
+      history.push("/");
   };
 
   return (
     <div className="create-post-form">
-      <form id="postform" onSubmit={onSubmit}>
+      <form name="postform" id="postform" onSubmit={onSubmit}>
         <input
           type="text"
           placeholder="Post Title"
           name="title"
           autoComplete="off"
+          maxlength="120"
           value={input.title}
           onChange={updateField}
+          required
         />
 
         <input
@@ -44,6 +46,7 @@ const CreatePost = (props) => {
           placeholder="Image URL"
           name="image"
           autoComplete="off"
+          minLength="0"
           value={input.image}
           onChange={updateField}
         />
@@ -53,8 +56,10 @@ const CreatePost = (props) => {
           placeholder="Description"
           name="description"
           autoComplete="off"
+          maxlength="1000"
           value={input.description}
           onChange={updateField}
+          required
         />
 
         <div className="submit-btn">
