@@ -308,6 +308,11 @@ select {
   margin-top: 10px;
 }
 
+/*--------------------------------------------------*/
+
+
+
+
 @media only screen and (max-width: 1030px) {
   aside {
     left: 10%;

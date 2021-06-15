@@ -1,5 +1,6 @@
-import { Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import profileImage from "./profile-image.PNG";
+import { Button } from "@material-ui/core";
 
 function Profile(props) {
   return (
@@ -8,8 +9,7 @@ function Profile(props) {
         <div className="sidebar-profile">
           {/* sample profile image */}
           <img src={profileImage} alt="Profile Photo" />
-          <h3 className="user-name">{props.currentUser.name}</h3>
-          <p className="user-email">{props.currentUser.email}</p>
+          <h3 className="user-email">{props.currentUser.email}</h3>
 
           <div className="sidebar-options">
             <ul>
@@ -24,26 +24,17 @@ function Profile(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/edit-profile" className="sidebar-link">
-                  <span class="material-icons-outlined">manage_accounts</span>
-                  Edit Profile
+                <Link to="/signup" className="sidebar-link">
+                <span class="material-icons-outlined">login</span>
+                  Signup
                 </Link>
               </li>
-              {props.currentUser ? (
-                <li>
-                  <Link to="" onClick={props.logout} className="sidebar-link">
-                    <span class="material-icons-outlined">logout</span>
-                    Logout
-                  </Link>
-                </li>
-              ) : (
-                <li>
-                  <Link to="/login" className="sidebar-link">
-                    <span class="material-icons-outlined">login</span>
-                    Login
-                  </Link>
-                </li>
-              )}
+              <li>
+                <Link to="/login" className="sidebar-link">
+                  <span class="material-icons-outlined">login</span>
+                  Login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

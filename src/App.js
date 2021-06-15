@@ -8,17 +8,27 @@ import Notifications from "./Notifications";
 import Post from "./Post";
 import Login from "./Login";
 import Signup from "./Signup";
-import EditProfile from "./EditProfile";
 
-const App = () => {
+const App = (props) => {
   const [posts, setPosts] = useState([]);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState([]);
+
+  const currentUser = user => {
+    setUser(user);
+  }
+
+  const logout = () => {
+    setUser();
+  }
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:5000/posts/`);
-      const posts = await response.json();
+      const postResponse = await fetch(`http://localhost:5000/posts/`);
+      const posts = await postResponse.json();
       setPosts(posts);
+      const userResponse = await fetch(`http://localhost:5000/users/`);
+      const users = await userResponse.json();
+      setUser(users);
     }
     fetchData();
   }, []);
@@ -35,14 +45,6 @@ const App = () => {
     const post = await response.json();
 
     setPosts((prevPosts) => [...prevPosts, post]);
-  };
-
-  const currentUser = (user) => {
-    setUser(user);
-  };
-
-  const logout = () => {
-    setUser();
   };
 
   return (
@@ -71,18 +73,14 @@ const App = () => {
         <Route exact path="/notifications">
           <Notifications />
         </Route>
-        
         <Route exact path="/profile">
           <Profile logout={logout} currentUser={user} />
         </Route>
         <Route exact path="/login">
-          <Login currentUser={currentUser}/>
+          <Login currentUser={currentUser} />
         </Route>
         <Route exact path="/signup">
-          <Signup currentUser={currentUser}/>
-        </Route>
-        <Route exact path="/edit-profile">
-          <EditProfile user={user} email={user.email}/>
+          <Signup currentUser={currentUser} />
         </Route>
       </Switch>
     </>
