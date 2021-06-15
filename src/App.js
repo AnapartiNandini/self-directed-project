@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(`http://localhost:3000/posts/`);
+      const response = await fetch(`http://localhost:5000/posts/`);
       const posts = await response.json();
       setPosts(posts);
     }
@@ -20,7 +20,7 @@ const App = () => {
   }, []);
 
   const onCreatePost = async (formData) => {
-    const response = await fetch(`http://localhost:3000/posts/`, {
+    const response = await fetch(`http://localhost:5000/posts/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

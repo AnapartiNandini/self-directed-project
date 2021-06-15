@@ -1,12 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #cbb26a;
   background: #1d1c1c;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .material-icons-outlined {
@@ -259,14 +268,21 @@ select {
   left: 20%;
 }
 
+/* .posts {
+  width: 100%;
+} */
+
 .post {
-  display: flex;
+  display: block;
+  float: left;
   gap: 24px;
-  border-color: #eeeeef;
-  border: 1px solid #cecece;
   border-radius: 4px;
   padding: 24px;
   margin: 24px;
+  width: 25%;
+  height: 25%;
+  border: 1px solid #cbb26a;
+  text-align: center;
 }
 
 .post img {
@@ -274,12 +290,21 @@ select {
   width: 200px;
   border-radius: 4px;
   object-fit: cover;
+  vertical-align: middle;
 }
 
 .post-title {
   font-weight: 700;
   font-size: 21px;
   margin-bottom: 5px;
+}
+
+.post-info {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1030px) {
@@ -303,5 +328,9 @@ select {
 
   .create-post-form input[type="submit"] {
     width: 29%;
+  }
+
+  .post {
+    width: 34%;
   }
 }

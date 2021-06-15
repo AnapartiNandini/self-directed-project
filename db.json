@@ -1,3 +1,22 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "title": "Title",
+      "image": "https://i.pinimg.com/564x/24/57/1c/24571c77cab780346263bc5b562a2bdd.jpg",
+      "description": "Sparks Lake",
+      "id": 1
+    },
+    {
+      "title": "Harmonize with Nature",
+      "image": "https://i.pinimg.com/564x/08/d4/b2/08d4b2703f17755e2d6032f64df79dc1.jpg",
+      "description": "Canadian Rockies at its best",
+      "id": 2
+    },
+    {
+      "title": "Mountain Range",
+      "image": "https://i.pinimg.com/564x/f1/66/ec/f166ec90606d513cb898f31a00ee49f2.jpg",
+      "description": "Full moon setting at dawn over the Teton Range and Snake River, Grand Teton National Park, Wyoming",
+      "id": 3
+    }
+  ]
 }
